@@ -1,5 +1,6 @@
 var controller = new ScrollMagic.Controller();
 var vph = $(window).height();
+var tween = TweenMax.to(".chart-bg", 1, {y: "-100%"});
 
 console.log(vph);
 
@@ -38,4 +39,17 @@ $(function () { // wait for document ready
     .triggerHook(0)
 		.addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
 		.addTo(controller);
+
+    // var scene6 = new ScrollMagic.Scene({triggerElement: ".chart-block", duration: 200})
+		// 			.addTo(controller)
+		// 			.addIndicators() // add indicators (requires plugin)
+		// 			.on("progress", function (e) {
+    //         $('.chart-bg').css('top', (e.progress + "%"));
+		// 			});
+
+		var scene6 = new ScrollMagic.Scene({triggerElement: ".chart-block", duration: 350})
+						.setTween(tween)
+						.addIndicators() // add indicators (requires plugin)
+						.addTo(controller);
+
 });

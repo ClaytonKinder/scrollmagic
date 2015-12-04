@@ -137,6 +137,7 @@ HEADER
 
 header {
   height: 100px;
+  z-index: 10000;
   background-color: black;
 
   .header-block {
@@ -193,4 +194,32 @@ BlOCKS
 
 .page-block5 {
   background-color: $yellow;
+}
+
+/**************************
+CHART BLOCK
+**************************/
+
+.chart-block {
+  height: 100vh;
+  padding-top: 50px;
+  text-align: center;
+  @include flexbox(row, center, flex-start);
+
+  .chart-fg {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    background-color: rgba(158,158,158,0.5);
+
+
+    .chart-bg {
+      height: 100%;
+      width: 100%;
+      background-color: purple;
+      position: relative;
+      top: 100%;
+    }
+  }
+
 }
