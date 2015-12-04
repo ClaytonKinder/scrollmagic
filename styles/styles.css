@@ -1,0 +1,102 @@
+/**************************
+SASS VARIABLES & MIXINS
+**************************/
+/**************************
+SETUP
+**************************/
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: #212121; }
+
+a, a:active, a:focus {
+  outline: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif; }
+
+h1, h2, h3, h4, h5, h6, li, ul {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style-type: none; }
+
+img {
+  max-width: 100%; }
+
+html {
+  font-size: 24px;
+  color: #212121; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+.clearfix {
+  overflow: auto; }
+
+/**************************
+FIRST BLOCK
+**************************/
+.page-block1 {
+  width: 100%;
+  background: #9E9E9E;
+  display: table; }
+  .page-block1 .page-title {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 6rem;
+    color: white;
+    font-weight: lighter; }
+
+/**************************
+HEADER
+**************************/
+header {
+  height: 100px;
+  background-color: black; }
+  header .header-block {
+    float: left;
+    display: table;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.75);
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease; }
+    header .header-block:first-of-type.active {
+      background-color: #B71C1C; }
+    header .header-block:nth-of-type(2).active {
+      background-color: #0D47A1; }
+    header .header-block:nth-of-type(3).active {
+      background-color: #1B5E20; }
+    header .header-block:last-of-type.active {
+      background-color: #FF6F00; }
+    header .header-block div {
+      display: table-cell;
+      vertical-align: middle; }
+
+/**************************
+BlOCKS
+**************************/
+.page-block {
+  height: 100vh; }
+
+.page-block2 {
+  background-color: #F44336; }
+
+.page-block3 {
+  background-color: #2196F3; }
+
+.page-block4 {
+  background-color: #4CAF50; }
+
+.page-block5 {
+  background-color: #FFEB3B; }
+
+/*# sourceMappingURL=styles.css.map */

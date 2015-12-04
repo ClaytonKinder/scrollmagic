@@ -1,0 +1,196 @@
+/**************************
+SASS VARIABLES & MIXINS
+**************************/
+
+$pt: #212121;
+$ht: #E6C0C3;
+$st: #727272;
+$dt: #B6B6B6;
+$ddt: #878787;
+$wt: rgba(255,255,255,0.75);
+
+$success: #4CAF50;
+$darksuccess: #388E3C;
+
+$failure: #F44336;
+$darkfailure: #D32F2F;
+
+$gray: #9E9E9E;
+$red: #F44336;
+$hred: #B71C1C;
+$blue: #2196F3;
+$hblue: #0D47A1;
+$green: #4CAF50;
+$hgreen: #1B5E20;
+$yellow: #FFEB3B;
+$hyellow: #FF6F00;
+
+$size1: 6rem;
+$size2: 5rem;
+$size3: 4rem;
+$size4: 3.5rem;
+$size5: 3rem;
+$size6: 2.5rem;
+$size7: 2.0rem;
+
+$sans: 'Roboto', sans-serif;
+
+@mixin flexbox($direction, $justify, $align) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+          flex-direction: $direction;
+  -webkit-box-pack: $justify;
+  -webkit-justify-content: $justify;
+  -ms-flex-pack: $justify;
+          justify-content: $justify;
+  -webkit-box-align: $align;
+  -webkit-align-items: $align;
+  -ms-flex-align: $align;
+          align-items: $align;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+@mixin transition {
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+/**************************
+SETUP
+**************************/
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $pt;
+}
+
+a, a:active, a:focus {
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $sans;
+}
+
+h1, h2, h3, h4, h5, h6, li, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: 24px;
+  color: $pt;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+/**************************
+FIRST BLOCK
+**************************/
+
+.page-block1 {
+  width: 100%;
+  background: $gray;
+  display: table;
+
+  .page-title {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: $size1;
+    color: white;
+    font-weight: lighter;
+  }
+}
+
+/**************************
+HEADER
+**************************/
+
+header {
+  height: 100px;
+  background-color: black;
+
+  .header-block {
+    float: left;
+    display: table;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    color: $wt;
+    @include transition;
+
+    &:first-of-type.active {
+      background-color: $hred;
+    }
+
+    &:nth-of-type(2).active {
+      background-color: $hblue;
+    }
+
+    &:nth-of-type(3).active {
+      background-color: $hgreen;
+    }
+
+    &:last-of-type.active {
+      background-color: $hyellow;
+    }
+
+    div {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+/**************************
+BlOCKS
+**************************/
+
+.page-block {
+  height: 100vh;
+}
+
+.page-block2 {
+  background-color: $red;
+}
+
+.page-block3 {
+  background-color: $blue;
+}
+
+.page-block4 {
+  background-color: $green;
+}
+
+.page-block5 {
+  background-color: $yellow;
+}
